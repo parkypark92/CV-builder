@@ -1,8 +1,10 @@
-export default function Input({label, type}) {
+export default function Input({label, type = "text", id}) {
     return (
-    <label> 
+        <div className="input-ctnr">
+    <label htmlFor={id}> 
         {label}{":" + " "}
-        <input type={type} />
     </label>
+    <input type={type} id={id} />
+    </div>
     )
 }
