@@ -20,6 +20,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .wrapper.inputs {
@@ -47,4 +48,9 @@ textarea {
 
 .personal-statement {
   align-items: center;
+}
+
+.job-heading {
+  display: flex;
+  justify-content: center;
 }
