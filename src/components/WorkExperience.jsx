@@ -20,20 +20,24 @@ export default function WorkExperience() {
 
             {jobIds.map(jobId => {
                 return (
-                    <div key={uuidv4()} id={jobId}>
+                <div key={uuidv4()} id={jobId}>
                     <h3>Job {jobId}</h3>
                     <div className="individual-job">
                         <div className="wrapper inputs">
-                                        <Input label="Company Name" id={"company" + jobId}></Input>
-                                        <Input label="Start Date" type='date' id={"job-start" + jobId}></Input>
-                                        <Input label="End Date" type='date' id={"job-end" + jobId}></Input>
-                                        <Input label="Job Title" id={"title" + jobId}></Input>
-                                        <Input label="Responsibilities" id={"responsibilities" + jobId}></Input>
-                                    </div>
-                                    <button type="button" className="delete-job-button" onClick={handleDeleteJob}>Remove Job</button>
+                            <Input label="Company Name:" id={"company" + jobId}></Input>
+                            <Input label="Start Date:" type='date' id={"job-start" + jobId}></Input>
+                            <Input label="End Date:" type='date' id={"job-end" + jobId}></Input>
+                            <Input label="Job Title:" id={"title" + jobId}></Input>
+                            <Input label="Responsibilities:" id={"responsibilities" + jobId}></Input>
+                            <Input label=""></Input>
+                            <Input label=""></Input>
+                            <Input label=""></Input>
+                            <Input label=""></Input>
+                            
+                        </div>
+                        <button type="button" className="delete-job-button" onClick={handleDeleteJob}>Remove Job</button>
                     </div>
-
-            </div>   
+                </div>   
                 )
             })}
         </div>
