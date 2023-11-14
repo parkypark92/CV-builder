@@ -3,7 +3,7 @@ import Input from "./Input"
 export default function GeneralInformation() {
     return (
         <div className="wrapper">
-            <h2>General Information</h2>
+            <h2 className="section-heading">General Information</h2>
             <div className="wrapper inputs">
                 <Input label="Name" id="name"/>
                 <Input label="Email" type="email" id="email"/>
