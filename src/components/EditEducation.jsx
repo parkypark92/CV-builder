@@ -1,6 +1,6 @@
 import Input from "./Input"
 
-export default function Education() {
+export default function EditEducation() {
     return (
         <div className="wrapper ">
             <h2 className="section-heading">Education</h2>

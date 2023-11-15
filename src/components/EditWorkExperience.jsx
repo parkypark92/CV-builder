@@ -2,7 +2,7 @@ import { v4 as uuidv4} from "uuid";
 import Input from "./Input"
 import { useState } from "react"
 
-export default function WorkExperience() {
+export default function EditWorkExperience() {
     const [jobIds, setJobIds] = useState([]);
 
     const handleAddJob = () => setJobIds([...jobIds, jobIds.length + 1]);

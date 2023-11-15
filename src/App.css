@@ -71,3 +71,11 @@ textarea {
   height: 50px;
   align-self: center;
 }
+
+.hidden {
+  display: none;
+}
+
+.unhidden {
+  display: initial;
+}
