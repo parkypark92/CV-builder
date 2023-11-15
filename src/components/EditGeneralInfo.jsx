@@ -7,8 +7,8 @@ export default function EditGeneralInformation({data, handleInput}) {
             <h2 className="section-heading">General Information</h2>
             <div className="wrapper inputs">
                 <Input label="Name:" id="name" data={data.name} handleInput={handleInput}/>
-                <Input label="Email:" type="email" id="email"/>
-                <Input label="Telephone:" type="number" id="tel"/>
+                <Input label="Email:" type="email" id="email" data={data.email} handleInput={handleInput}/>
+                <Input label="Telephone:" type="number" id="number" data={data.number} handleInput={handleInput}/>
             </div>
         </div>
     )

@@ -31,9 +31,9 @@ function App() {
           <h1>CV</h1>
           <form action="">
             <EditGeneralInformation data={data} handleInput={handleInput}/>
-            <EditPersonalStatement/>
-            <EditWorkExperience/>
-            <EditEducation/>
+            <EditPersonalStatement data={data.statement} handleInput={handleInput}/>
+            <EditWorkExperience data={data} handleInput={handleInput}/>
+            <EditEducation data={data} handleInput={handleInput}/>
             <button type='button' onClick={handleSubmit}>Submit</button>
           </form>
         </div>
