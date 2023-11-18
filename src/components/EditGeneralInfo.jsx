@@ -1,7 +1,6 @@
 import Input from "./Input"
 
 export default function EditGeneralInformation({data, handleInput}) {
-    console.log(data);
     return (
         <div className="wrapper">
             <h2 className="section-heading">General Information</h2>

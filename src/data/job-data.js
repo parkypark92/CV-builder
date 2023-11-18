@@ -1,9 +1,13 @@
-export default function createJobData(id) {
+export default function createJobData() {
   return {
-    [`company${id}`]: "",
-    [`job-start${id}`]: "",
-    [`job-end${id}`]: "",
-    [`title${title}`]: "",
-    [`responsibilities${id}`]: "",
+    company: "",
+    "job-start": "",
+    "job-end": "",
+    title: "",
+    "first-resp": "",
+    "second-resp": "",
+    "third-resp": "",
+    "fourth-resp": "",
+    "fifth-resp": "",
   };
 }

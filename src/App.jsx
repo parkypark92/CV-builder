@@ -4,6 +4,7 @@ import EditPersonalStatement from './components/EditPersonalStatement'
 import EditWorkExperience from './components/EditWorkExperience'
 import EditEducation from './components/EditEducation'
 import personalData from './data/personal-data'
+import createJobData from "./data/job-data";
 import './App.css'
 
 
@@ -12,6 +13,7 @@ function App() {
   const [editPageVisibility, setEditPageVisibility] = useState('unhidden');
   const [cvPageVisibility, setCvPageVisibility] = useState('hidden');
   const [data, setData] = useState(personalData);
+  const [jobData, setJobData] = useState([]);
   const handleSubmit = () => {
     setEditPageVisibility("hidden");
     setCvPageVisibility("unhidden")
@@ -25,6 +27,22 @@ function App() {
     setData({...dataCopy, [e.target.id]: e.target.value})
   } 
 
+  const handleJobInput = (e) => {
+    const jobsCopy = [...jobData];
+    const jobIndex = e.target.parentNode.parentNode.parentNode.parentNode.id - 1
+    const currentJob = jobsCopy[jobIndex];
+    const newJobData = {...currentJob, [e.target.className]: e.target.value};
+    const updatedJobData = jobsCopy.map((job, index) =>
+      index === jobIndex ? newJobData : job
+     )
+    setJobData(updatedJobData);
+    console.log(updatedJobData);
+  }
+
+   const handleNewJobData = () => {
+    setJobData([...jobData, createJobData()]);
+  }
+
     return (
       <div className="main-ctnr">
         <div className={`edit-page-ctnr ${editPageVisibility}`} >
@@ -32,7 +50,7 @@ function App() {
           <form action="">
             <EditGeneralInformation data={data} handleInput={handleInput}/>
             <EditPersonalStatement data={data.statement} handleInput={handleInput}/>
-            <EditWorkExperience data={data} handleInput={handleInput}/>
+            <EditWorkExperience jobData={jobData} handleNewJobData={handleNewJobData} handleInput={handleJobInput}/>
             <EditEducation data={data} handleInput={handleInput}/>
             <button type='button' onClick={handleSubmit}>Submit</button>
           </form>
