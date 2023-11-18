@@ -2,7 +2,7 @@ import { v4 as uuidv4} from "uuid";
 import Input from "./Input"
 import { useState } from "react"
 
-export default function EditWorkExperience({jobData, handleNewJobData, handleInput}) {
+export default function EditWorkExperience({jobData, handleNewJobData, handleRemoveJobData, handleInput}) {
     const [jobIds, setJobIds] = useState([]);
 
 
@@ -15,7 +15,7 @@ export default function EditWorkExperience({jobData, handleNewJobData, handleInp
         const removedId = jobIds.filter(id => e.target.parentNode.parentNode.id != (jobIds.indexOf(id) + 1));
         const newIds = removedId.map((id, index) => id = index + 1);
         setJobIds(newIds);
-
+        handleRemoveJobData(e);
     }
     const addButtonMessage = jobIds.length === 0 ? "Add your first job!" : "Add a new job!"
     return (

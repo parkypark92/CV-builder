@@ -43,6 +43,10 @@ function App() {
     setJobData([...jobData, createJobData()]);
   }
 
+  const handleRemoveJobData = (e) => {
+   setJobData(jobData.filter(job => e.target.parentNode.parentNode.id != (jobData.indexOf(job) + 1)));
+  }
+
     return (
       <div className="main-ctnr">
         <div className={`edit-page-ctnr ${editPageVisibility}`} >
@@ -50,7 +54,7 @@ function App() {
           <form action="">
             <EditGeneralInformation data={data} handleInput={handleInput}/>
             <EditPersonalStatement data={data.statement} handleInput={handleInput}/>
-            <EditWorkExperience jobData={jobData} handleNewJobData={handleNewJobData} handleInput={handleJobInput}/>
+            <EditWorkExperience jobData={jobData} handleNewJobData={handleNewJobData} handleRemoveJobData={handleRemoveJobData} handleInput={handleJobInput}/>
             <EditEducation data={data} handleInput={handleInput}/>
             <button type='button' onClick={handleSubmit}>Submit</button>
           </form>
