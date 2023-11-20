@@ -7,69 +7,6 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: 50px;
-}
-
-.main-ctnr {
-  background-color: #eeeeee;
-  padding: 30px;
-  width: 100%;
-  max-width: 800px;
-  min-height: 100vh;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 50px;
-}
-
-.section-heading {
-  text-decoration: underline;
-}
-
-.wrapper.inputs {
-  gap: 20px;
-  margin-bottom: 0;
-}
-
-.input-ctnr {
-  display: flex;
-  gap: 10px;
-}
-
-label {
-  width: 160px;
-  text-align: right;
-}
-
-input {
-  width: 400px;
-}
-
-textarea {
-  width: 400px;
-  resize: none;
-}
-
-.personal-statement {
-  align-items: center;
-}
-
-.add-job-button {
-  width: 150px;
-  align-self: center;
-}
-
-.individual-job {
-  display: flex;
-  gap: 20px;
-}
-
-.delete-job-button {
-  height: 50px;
-  align-self: center;
 }
 
 .hidden {

@@ -1,0 +1,22 @@
+.cv-page-ctnr {
+  width: 100%;
+  background-color: #eeeeee;
+}
+
+.cv-page {
+  padding: 30px;
+  width: 100%;
+  max-width: 800px;
+  min-height: 100vh;
+  background-color: #fff;
+  margin: 50px auto;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* .cv-personal-statement p {
+} */
