@@ -14,14 +14,21 @@ function App() {
   const [cvPageVisibility, setCvPageVisibility] = useState("hidden");
   const [data, setData] = useState(personalData);
   const [jobData, setJobData] = useState([]);
+
+  // EVENT HANDLERS
   const handleSubmit = () => {
-    setEditPageVisibility("hidden");
-    setCvPageVisibility("unhidden");
+    const inputs = Array.from(document.getElementsByTagName("input"));
+    if (!inputs.some((input) => !input.checkValidity())) {
+      setEditPageVisibility("hidden");
+      setCvPageVisibility("unhidden");
+    }
   };
+
   const handleEdit = () => {
     setCvPageVisibility("hidden");
     setEditPageVisibility("unhidden");
   };
+
   const handleInput = (e) => {
     setData({ ...data, [e.target.id]: e.target.value });
   };
@@ -56,7 +63,7 @@ function App() {
       {/* CV EDITOR PAGE */}
       <div className={`edit-page-ctnr ${editPageVisibility}`}>
         <h1>CV</h1>
-        <form action="">
+        <form action="" onSubmit={(e) => e.preventDefault()}>
           <EditGeneralInformation data={data} handleInput={handleInput} />
           <EditPersonalStatement
             data={data.statement}
@@ -69,7 +76,7 @@ function App() {
             handleInput={handleJobInput}
           />
           <EditEducation data={data} handleInput={handleInput} />
-          <button type="button" onClick={handleSubmit}>
+          <button type="submit" onClick={handleSubmit}>
             Submit
           </button>
         </form>
