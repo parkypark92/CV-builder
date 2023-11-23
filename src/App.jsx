@@ -62,77 +62,90 @@ function App() {
     <>
       {/* CV EDITOR PAGE */}
       <div className={`edit-page-ctnr ${editPageVisibility}`}>
-        <h1>CV</h1>
         <form action="" onSubmit={(e) => e.preventDefault()}>
-          <EditGeneralInformation data={data} handleInput={handleInput} />
-          <EditPersonalStatement
-            data={data.statement}
-            handleInput={handleInput}
-          />
-          <EditWorkExperience
-            jobData={jobData}
-            handleNewJobData={handleNewJobData}
-            handleRemoveJobData={handleRemoveJobData}
-            handleInput={handleJobInput}
-          />
-          <EditEducation data={data} handleInput={handleInput} />
+          <div className="fieldset-display">
+            <div className="screen-left">
+              <fieldset>
+                <EditGeneralInformation data={data} handleInput={handleInput} />
+              </fieldset>
+              <fieldset>
+                <EditPersonalStatement
+                  data={data.statement}
+                  handleInput={handleInput}
+                />
+              </fieldset>
+              <fieldset>
+                <EditEducation data={data} handleInput={handleInput} />
+              </fieldset>
+            </div>
+            <div className="screen-right">
+              <fieldset>
+                <EditWorkExperience
+                  jobData={jobData}
+                  handleNewJobData={handleNewJobData}
+                  handleRemoveJobData={handleRemoveJobData}
+                  handleInput={handleJobInput}
+                />
+              </fieldset>
+            </div>
+          </div>
           <button type="submit" onClick={handleSubmit}>
             Submit
           </button>
         </form>
       </div>
       {/* CV DISPLAY PAGE */}
-      <div className={`cv-page-ctnr ${cvPageVisibility}`}>
-        <div className="cv-page">
-          <header>
-            <h1 className="cv-name">{data.name}</h1>
-            <div className="contact-details">
-              <p className="cv-email">{data.email}</p>
-              <p className="cv-number">{data.number}</p>
-            </div>
-          </header>
+      <div className={`cv-page ${cvPageVisibility}`}>
+        <header>
+          <h1 className="cv-name">{data.name}</h1>
+          <div className="contact-details">
+            <p className="cv-email">{data.email}</p>
+            <p className="cv-number">{data.number}</p>
+          </div>
+        </header>
+        {data.statement !== "" && (
           <section className="cv-personal-statement">
             <h2>Personal Statement</h2>
             <p>{data.statement}</p>
           </section>
-          <section className="cv-experience">
-            <h2>Work Experience</h2>
-            {jobData.map((job, index) => {
-              return (
-                <div key={index}>
-                  <h3>
-                    {job.company +
-                      " (" +
-                      job.title +
-                      "): " +
-                      job["job-start"] +
-                      " to " +
-                      job["job-end"]}
-                  </h3>
-                  <h4>Responsibilities:</h4>
-                  {job["first-resp"] !== "" && <li>{job["first-resp"]}</li>}
-                  {job["second-resp"] !== "" && <li>{job["second-resp"]}</li>}
-                  {job["third-resp"] !== "" && <li>{job["third-resp"]}</li>}
-                  {job["fourth-resp"] !== "" && <li>{job["fourth-resp"]}</li>}
-                  {job["fifth-resp"] !== "" && <li>{job["fifth-resp"]}</li>}
-                </div>
-              );
-            })}
-          </section>
-          <section className="cv-education">
-            <h2>Education</h2>
-            <h3>
-              {data.school +
-                `(${data.award}): ` +
-                data["school-start"] +
-                " to " +
-                data["school-end"]}{" "}
-            </h3>
-          </section>
-          <button type="button" onClick={handleEdit}>
-            Edit CV
-          </button>
-        </div>
+        )}
+        <section className="cv-experience">
+          <h2>Work Experience</h2>
+          {jobData.map((job, index) => {
+            return (
+              <div key={index}>
+                <h3>
+                  {job.company +
+                    " (" +
+                    job.title +
+                    "): " +
+                    job["job-start"] +
+                    " to " +
+                    job["job-end"]}
+                </h3>
+                <h4>Responsibilities:</h4>
+                {job["first-resp"] !== "" && <li>{job["first-resp"]}</li>}
+                {job["second-resp"] !== "" && <li>{job["second-resp"]}</li>}
+                {job["third-resp"] !== "" && <li>{job["third-resp"]}</li>}
+                {job["fourth-resp"] !== "" && <li>{job["fourth-resp"]}</li>}
+                {job["fifth-resp"] !== "" && <li>{job["fifth-resp"]}</li>}
+              </div>
+            );
+          })}
+        </section>
+        <section className="cv-education">
+          <h2>Education</h2>
+          <h3>
+            {data.school +
+              `(${data.award}): ` +
+              data["school-start"] +
+              " to " +
+              data["school-end"]}{" "}
+          </h3>
+        </section>
+        <button type="button" onClick={handleEdit}>
+          Edit CV
+        </button>
       </div>
     </>
   );

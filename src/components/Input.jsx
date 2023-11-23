@@ -9,16 +9,15 @@ export default function Input({
   handleInput,
 }) {
   return (
-    <div className="input-ctnr">
-      <label htmlFor={id}>{label} </label>
-      <input
-        type={type}
-        id={id}
-        className={className}
-        onChange={handleInput}
-        value={data}
-        required
-      />
-    </div>
+    <input
+      type={type}
+      id={id}
+      className={className}
+      onChange={handleInput}
+      value={data}
+      aria-label={label}
+      placeholder={label}
+      required
+    />
   );
 }

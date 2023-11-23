@@ -37,16 +37,16 @@ export default function EditWorkExperience({
           <div key={jobId} id={jobId}>
             <h3>Job {jobId}</h3>
             <div className="individual-job">
-              <div className="wrapper inputs">
+              <div className="wrapper job inputs ">
                 <Input
-                  label="Company Name:"
+                  label="Company Name"
                   id={"company" + jobId}
                   className="company"
                   data={jobData[jobId - 1]["company"]}
                   handleInput={handleInput}
                 ></Input>
                 <Input
-                  label="Start Date:"
+                  label="Start Date"
                   type="date"
                   id={"job-start" + jobId}
                   className="job-start"
@@ -54,7 +54,7 @@ export default function EditWorkExperience({
                   handleInput={handleInput}
                 ></Input>
                 <Input
-                  label="End Date:"
+                  label="End Date"
                   type="date"
                   id={"job-end" + jobId}
                   className="job-end"
@@ -62,42 +62,42 @@ export default function EditWorkExperience({
                   handleInput={handleInput}
                 ></Input>
                 <Input
-                  label="Job Title:"
+                  label="Job Title"
                   id={"title" + jobId}
                   className="title"
                   data={jobData[jobId - 1]["title"]}
                   handleInput={handleInput}
                 ></Input>
                 <Input
-                  label="Responsibilities:"
+                  label="Job Responsibility"
                   id={"first-resp" + jobId}
                   className="first-resp"
                   data={jobData[jobId - 1]["first-resp"]}
                   handleInput={handleInput}
                 ></Input>
                 <Input
-                  label=""
+                  label="Job Responsibility"
                   id={"second-resp" + jobId}
                   className="second-resp"
                   data={jobData[jobId - 1]["second-resp"]}
                   handleInput={handleInput}
                 ></Input>
                 <Input
-                  label=""
+                  label="Job Responsibility"
                   id={"third-resp" + jobId}
                   className="third-resp"
                   data={jobData[jobId - 1]["third-resp"]}
                   handleInput={handleInput}
                 ></Input>
                 <Input
-                  label=""
+                  label="Job Responsibility"
                   id={"fourth-resp" + jobId}
                   className="fourth-resp"
                   data={jobData[jobId - 1]["fourth-resp"]}
                   handleInput={handleInput}
                 ></Input>
                 <Input
-                  label=""
+                  label="Job Responsibility"
                   id={"fifth-resp" + jobId}
                   className="fifth-resp"
                   data={jobData[jobId - 1]["fifth-resp"]}
