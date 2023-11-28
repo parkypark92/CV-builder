@@ -9,6 +9,7 @@ export default function EditPersonalStatement({ data, handleInput }) {
         rows="10"
         onChange={handleInput}
         value={data}
+        placeholder="(Optional)"
       ></textarea>
     </div>
   );

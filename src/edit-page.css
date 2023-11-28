@@ -22,12 +22,13 @@
 
 fieldset {
   margin: 0 20px 20px 0;
-  padding: 20px 30px 20px 30px;
+  padding: 20px 30px 30px 30px;
   background-color: #fff;
   text-align: left;
   font-weight: bold;
   border: none;
   border-radius: 17px;
+  box-shadow: 1px 1px 5px rgb(221, 221, 221);
 }
 
 .section-heading {
@@ -46,31 +47,77 @@ fieldset {
 
 input {
   height: 35px;
+  padding: 0 10px;
 }
 
 input,
 textarea {
   background-color: #eef0f4;
   border: none;
-  border-radius: 10px;
+  border-radius: 17px;
 }
 
 textarea {
   resize: none;
   width: 100%;
+  padding: 10px;
+}
+
+.add-job-button,
+.delete-job-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .add-job-button {
-  width: 150px;
-  align-self: center;
+  height: 40px;
+  width: 100px;
+  background-color: rgba(100, 231, 176, 0.466);
 }
 
-.individual-job {
+.individual-job-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-job-button {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: rgba(228, 54, 54, 0.616);
+}
+
+.delete-icon {
+  pointer-events: none;
+}
+
+.start-end-dates {
   display: flex;
   gap: 20px;
 }
 
-.delete-job-button {
-  height: 50px;
-  align-self: center;
+.start-end-dates p {
+  font-weight: 500;
+  margin: 0;
+}
+
+.start-end-dates input {
+  flex: 1;
+}
+
+.start-date,
+.end-date {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+}
+
+button[type="submit"] {
+  height: 40px;
+  width: 100px;
+  color: #213547;
+  border: 1px solid #213547;
 }

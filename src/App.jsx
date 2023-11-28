@@ -35,8 +35,7 @@ function App() {
 
   const handleJobInput = (e) => {
     const jobsCopy = [...jobData];
-    const jobIndex =
-      e.target.parentNode.parentNode.parentNode.parentNode.id - 1;
+    const jobIndex = e.target.parentNode.parentNode.parentNode.id - 1;
     const currentJob = jobsCopy[jobIndex];
     const newJobData = { ...currentJob, [e.target.className]: e.target.value };
     const updatedJobData = jobsCopy.map((job, index) =>
@@ -51,6 +50,7 @@ function App() {
   };
 
   const handleRemoveJobData = (e) => {
+    console.log(e.target.parentNode.parentNode.id);
     setJobData(
       jobData.filter(
         (job) => e.target.parentNode.parentNode.id != jobData.indexOf(job) + 1

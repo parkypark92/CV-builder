@@ -7,7 +7,22 @@ export default function Input({
   className,
   data,
   handleInput,
+  isRequired = true,
 }) {
+  if (isRequired) {
+    return (
+      <input
+        type={type}
+        id={id}
+        className={className}
+        onChange={handleInput}
+        value={data}
+        aria-label={label}
+        placeholder={label}
+        required
+      />
+    );
+  }
   return (
     <input
       type={type}
@@ -16,8 +31,7 @@ export default function Input({
       onChange={handleInput}
       value={data}
       aria-label={label}
-      placeholder={label}
-      required
+      placeholder={label + " (Optional)"}
     />
   );
 }

@@ -12,25 +12,33 @@ export default function EditEducation({ data, handleInput }) {
           handleInput={handleInput}
         ></Input>
         <Input
-          label="Start Date"
-          type="date"
-          id="school-start"
-          data={data["school-start"]}
-          handleInput={handleInput}
-        ></Input>
-        <Input
-          label="End Date"
-          type="date"
-          id="school-end"
-          data={data["school-end"]}
-          handleInput={handleInput}
-        ></Input>
-        <Input
           label="Degree/Cert/Diploma"
           id="award"
           data={data.award}
           handleInput={handleInput}
         ></Input>
+        <div className="start-end-dates">
+          <div className="start-date">
+            <p>Start:</p>
+            <Input
+              label="Start Date"
+              type="date"
+              id="school-start"
+              data={data["school-start"]}
+              handleInput={handleInput}
+            ></Input>
+          </div>
+          <div className="end-date">
+            <p>End:</p>
+            <Input
+              label="End Date"
+              type="date"
+              id="school-end"
+              data={data["school-end"]}
+              handleInput={handleInput}
+            ></Input>
+          </div>
+        </div>
       </div>
     </div>
   );

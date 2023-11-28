@@ -1,6 +1,10 @@
 import Input from "./Input";
 
-export default function EditGeneralInformation({ data, handleInput }) {
+export default function EditGeneralInformation({
+  data,
+  handleInput,
+  required,
+}) {
   return (
     <div className="wrapper">
       <h2 className="section-heading">General Information</h2>
