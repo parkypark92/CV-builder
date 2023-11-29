@@ -2,7 +2,7 @@ import Input from "./Input";
 import { useState } from "react";
 import Icon from "@mdi/react";
 import { mdiPlus } from "@mdi/js";
-import { mdiMinusThick } from "@mdi/js";
+import { mdiMinus } from "@mdi/js";
 
 export default function EditWorkExperience({
   jobData,
@@ -40,7 +40,7 @@ export default function EditWorkExperience({
                 className="delete-job-button"
                 onClick={handleDeleteJob}
               >
-                <Icon path={mdiMinusThick} size={1} className="delete-icon" />
+                <Icon path={mdiMinus} size={1} className="delete-icon" />
               </button>
             </div>
             <div className="individual-job">
