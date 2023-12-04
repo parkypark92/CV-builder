@@ -3,7 +3,7 @@
 }
 
 .cv-page {
-  padding: 30px;
+  padding: 30px 0 0px 30px;
   width: 21cm;
   height: 29.7cm;
   background-color: #ffffff;
@@ -12,10 +12,13 @@
   box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
 
-.cv-page h2 {
+h1 {
+  color: #ecd0a8;
+}
+
+.main-content h2 {
   font-size: 1em;
   margin: 0;
-  background-color: #f0f0f0;
   border-bottom: 1px solid #213547;
 }
 
@@ -27,31 +30,70 @@
 .cv-page h4 {
   font-size: 0.9em;
   margin-bottom: 0;
-  padding-left: 30px;
+  padding-left: 10px;
 }
 
-.cv-page p,
-.cv-page li {
+.main-content p,
+.main-content li {
   font-size: 0.9em;
 }
 
-.cv-page ul {
-  padding-left: 60px;
+.main-content ul {
+  padding-left: 30px;
   margin-top: 0;
+}
+
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .cv-name {
   font-size: 2em;
-  text-align: center;
   margin: 0;
 }
 
 .contact-details {
+  color: gray;
+  text-align: right;
+  padding-right: 30px;
+}
+
+.cv-email,
+.cv-number {
+  margin: 0;
+}
+
+main {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+}
+
+.main-content {
+  width: 14cm;
+  padding-right: 20px;
+}
+
+aside {
+  width: 7cm;
+  height: 100%;
+  padding: 0 30px 0 30px;
+  background-color: #ecd0a8;
+  color: #ffffff;
+  text-align: left;
+}
+
+aside li {
+  list-style: none;
+  font-size: 1em;
+  padding: 5px 0 5px 0;
+  border-bottom: 2px solid white;
 }
 
 .cv-dates {
   margin-top: 0;
+}
+
+.cv-experience {
+  margin-bottom: 30px;
 }
