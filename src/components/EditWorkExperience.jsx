@@ -126,9 +126,11 @@ export default function EditWorkExperience({
           </div>
         );
       })}
-      <button type="button" className="add-job-button" onClick={handleAddJob}>
-        <Icon path={mdiPlus} size={1} />
-      </button>
+      {jobIds.length < 2 && (
+        <button type="button" className="add-job-button" onClick={handleAddJob}>
+          <Icon path={mdiPlus} size={1} />
+        </button>
+      )}
     </div>
   );
 }

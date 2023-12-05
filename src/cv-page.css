@@ -1,6 +1,6 @@
 .cv-page-ctnr {
   margin-bottom: 50px;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .cv-page {
@@ -76,10 +76,6 @@ main {
 .cv-dates {
   margin: 0 0 10px 0;
 }
-
-/* .cv-experience {
-  margin-bottom: 30px;
-} */
 
 aside {
   width: 7cm;
