@@ -5,6 +5,7 @@ export default function Input({
   type = "text",
   id,
   className,
+  maxlength,
   data,
   handleInput,
   isRequired = true,
@@ -15,6 +16,7 @@ export default function Input({
         type={type}
         id={id}
         className={className}
+        maxLength={maxlength}
         onChange={handleInput}
         value={data}
         aria-label={label}
@@ -28,6 +30,7 @@ export default function Input({
       type={type}
       id={id}
       className={className}
+      maxLength={maxlength}
       onChange={handleInput}
       value={data}
       aria-label={label}

@@ -131,8 +131,7 @@ function App() {
                       {job["first-resp"] === "" &&
                       job["second-resp"] === "" &&
                       job["third-resp"] === "" &&
-                      job["fourth-resp"] === "" &&
-                      job["fifth-resp"] === "" ? null : (
+                      job["fourth-resp"] === "" ? null : (
                         <div>
                           <h4>Responsibilities:</h4>
                           <ul>
@@ -147,9 +146,6 @@ function App() {
                             )}
                             {job["fourth-resp"] !== "" && (
                               <li>{job["fourth-resp"]}</li>
-                            )}
-                            {job["fifth-resp"] !== "" && (
-                              <li>{job["fifth-resp"]}</li>
                             )}
                           </ul>
                         </div>

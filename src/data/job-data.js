@@ -8,6 +8,5 @@ export default function createJobData() {
     "second-resp": "",
     "third-resp": "",
     "fourth-resp": "",
-    "fifth-resp": "",
   };
 }

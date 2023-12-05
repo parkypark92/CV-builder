@@ -49,6 +49,7 @@ export default function EditWorkExperience({
                   label="Company Name"
                   id={"company" + jobId}
                   className="company"
+                  maxlength={30}
                   data={jobData[jobId - 1]["company"]}
                   handleInput={handleInput}
                 ></Input>
@@ -56,6 +57,7 @@ export default function EditWorkExperience({
                   label="Job Title"
                   id={"title" + jobId}
                   className="title"
+                  maxlength={30}
                   data={jobData[jobId - 1]["title"]}
                   handleInput={handleInput}
                 ></Input>
@@ -87,6 +89,7 @@ export default function EditWorkExperience({
                   label="Job Responsibility"
                   id={"first-resp" + jobId}
                   className="first-resp"
+                  maxlength={150}
                   data={jobData[jobId - 1]["first-resp"]}
                   handleInput={handleInput}
                   isRequired={false}
@@ -95,6 +98,7 @@ export default function EditWorkExperience({
                   label="Job Responsibility"
                   id={"second-resp" + jobId}
                   className="second-resp"
+                  maxlength={150}
                   data={jobData[jobId - 1]["second-resp"]}
                   handleInput={handleInput}
                   isRequired={false}
@@ -103,6 +107,7 @@ export default function EditWorkExperience({
                   label="Job Responsibility"
                   id={"third-resp" + jobId}
                   className="third-resp"
+                  maxlength={150}
                   data={jobData[jobId - 1]["third-resp"]}
                   handleInput={handleInput}
                   isRequired={false}
@@ -111,15 +116,8 @@ export default function EditWorkExperience({
                   label="Job Responsibility"
                   id={"fourth-resp" + jobId}
                   className="fourth-resp"
+                  maxlength={150}
                   data={jobData[jobId - 1]["fourth-resp"]}
-                  handleInput={handleInput}
-                  isRequired={false}
-                ></Input>
-                <Input
-                  label="Job Responsibility"
-                  id={"fifth-resp" + jobId}
-                  className="fifth-resp"
-                  data={jobData[jobId - 1]["fifth-resp"]}
                   handleInput={handleInput}
                   isRequired={false}
                 ></Input>

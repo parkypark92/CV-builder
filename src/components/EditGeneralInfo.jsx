@@ -12,6 +12,7 @@ export default function EditGeneralInformation({
         <Input
           label="Name"
           id="name"
+          maxlength={20}
           data={data.name}
           handleInput={handleInput}
         />
@@ -19,13 +20,15 @@ export default function EditGeneralInformation({
           label="Email"
           type="email"
           id="email"
+          maxlength={35}
           data={data.email}
           handleInput={handleInput}
         />
         <Input
           label="Telephone"
-          type="number"
+          type="tel"
           id="number"
+          maxlength={20}
           data={data.number}
           handleInput={handleInput}
         />

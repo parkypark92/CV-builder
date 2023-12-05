@@ -8,12 +8,14 @@ export default function EditEducation({ data, handleInput }) {
         <Input
           label="School Name"
           id="school"
+          maxlength={30}
           data={data.school}
           handleInput={handleInput}
         ></Input>
         <Input
           label="Degree/Cert/Diploma"
           id="award"
+          maxlength={30}
           data={data.award}
           handleInput={handleInput}
         ></Input>

@@ -7,6 +7,7 @@ export default function EditPersonalStatement({ data, handleInput }) {
         id="statement"
         cols="30"
         rows="10"
+        maxLength={500}
         onChange={handleInput}
         value={data}
         placeholder="(Optional)"

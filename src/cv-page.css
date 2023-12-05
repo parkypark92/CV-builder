@@ -1,5 +1,6 @@
 .cv-page-ctnr {
   margin-bottom: 50px;
+  overflow-wrap: break-word;
 }
 
 .cv-page {
@@ -12,37 +13,6 @@
   box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
 
-h1 {
-  color: #ecd0a8;
-}
-
-.main-content h2 {
-  font-size: 1em;
-  margin: 0;
-  border-bottom: 1px solid #213547;
-}
-
-.cv-page h3 {
-  font-size: 1em;
-  margin-bottom: 0;
-}
-
-.cv-page h4 {
-  font-size: 0.9em;
-  margin-bottom: 0;
-  padding-left: 10px;
-}
-
-.main-content p,
-.main-content li {
-  font-size: 0.9em;
-}
-
-.main-content ul {
-  padding-left: 30px;
-  margin-top: 0;
-}
-
 .cv-header {
   display: flex;
   justify-content: space-between;
@@ -50,11 +20,13 @@ h1 {
 }
 
 .cv-name {
-  font-size: 2em;
+  font-size: 1.5em;
+  color: #ecd0a8;
   margin: 0;
 }
 
 .contact-details {
+  font-size: 0.8em;
   color: gray;
   text-align: right;
   padding-right: 30px;
@@ -74,6 +46,41 @@ main {
   padding-right: 20px;
 }
 
+.main-content h2 {
+  font-size: 1em;
+  margin: 0;
+  border-bottom: 1px solid #213547;
+}
+
+.cv-page h3 {
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
+
+.cv-page h4 {
+  font-size: 0.85em;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.main-content p,
+.main-content li {
+  font-size: 0.85em;
+}
+
+.main-content ul {
+  padding-left: 30px;
+  margin-top: 0;
+}
+
+.cv-dates {
+  margin: 0 0 10px 0;
+}
+
+/* .cv-experience {
+  margin-bottom: 30px;
+} */
+
 aside {
   width: 7cm;
   height: 100%;
@@ -88,12 +95,4 @@ aside li {
   font-size: 1em;
   padding: 5px 0 5px 0;
   border-bottom: 2px solid white;
-}
-
-.cv-dates {
-  margin-top: 0;
-}
-
-.cv-experience {
-  margin-bottom: 30px;
 }
