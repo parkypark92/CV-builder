@@ -3,6 +3,7 @@ import EditGeneralInformation from "./components/EditGeneralInfo";
 import EditPersonalStatement from "./components/EditPersonalStatement";
 import EditWorkExperience from "./components/EditWorkExperience";
 import EditEducation from "./components/EditEducation";
+import EditSkills from "./components/EditSkills";
 import personalData from "./data/personal-data";
 import createJobData from "./data/job-data";
 import "./App.css";
@@ -83,6 +84,9 @@ function App() {
             </div>
             <div className="screen-right">
               <fieldset>
+                <EditSkills data={data} handleInput={handleInput} />
+              </fieldset>
+              <fieldset>
                 <EditWorkExperience
                   jobData={jobData}
                   handleNewJobData={handleNewJobData}
@@ -124,24 +128,32 @@ function App() {
                       <p className="cv-dates">
                         {job["job-start"] + " to " + job["job-end"]}
                       </p>
-                      <h4>Responsibilities:</h4>
-                      <ul>
-                        {job["first-resp"] !== "" && (
-                          <li>{job["first-resp"]}</li>
-                        )}
-                        {job["second-resp"] !== "" && (
-                          <li>{job["second-resp"]}</li>
-                        )}
-                        {job["third-resp"] !== "" && (
-                          <li>{job["third-resp"]}</li>
-                        )}
-                        {job["fourth-resp"] !== "" && (
-                          <li>{job["fourth-resp"]}</li>
-                        )}
-                        {job["fifth-resp"] !== "" && (
-                          <li>{job["fifth-resp"]}</li>
-                        )}
-                      </ul>
+                      {job["first-resp"] === "" &&
+                      job["second-resp"] === "" &&
+                      job["third-resp"] === "" &&
+                      job["fourth-resp"] === "" &&
+                      job["fifth-resp"] === "" ? null : (
+                        <div>
+                          <h4>Responsibilities:</h4>
+                          <ul>
+                            {job["first-resp"] !== "" && (
+                              <li>{job["first-resp"]}</li>
+                            )}
+                            {job["second-resp"] !== "" && (
+                              <li>{job["second-resp"]}</li>
+                            )}
+                            {job["third-resp"] !== "" && (
+                              <li>{job["third-resp"]}</li>
+                            )}
+                            {job["fourth-resp"] !== "" && (
+                              <li>{job["fourth-resp"]}</li>
+                            )}
+                            {job["fifth-resp"] !== "" && (
+                              <li>{job["fifth-resp"]}</li>
+                            )}
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   );
                 })}
@@ -157,12 +169,11 @@ function App() {
             <aside>
               <h2>Skills Profile</h2>
               <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVASCRIPT WITT A TON O SHIT </li>
-                <li>REACT</li>
-                <li>NPM</li>
-                <li>GIT</li>
+                <li>{data.skill1}</li>
+                <li>{data.skill2}</li>
+                <li>{data.skill3} </li>
+                <li>{data.skill4}</li>
+                <li>{data.skill5}</li>
               </ul>
             </aside>
           </main>
