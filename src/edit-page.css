@@ -121,3 +121,21 @@ button {
   color: #213547;
   border: 1px solid #213547;
 }
+
+@media screen and (max-width: 1025px) {
+  .fieldset-display {
+    flex-direction: column;
+  }
+
+  fieldset {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .start-date,
+  .end-date {
+    flex-direction: column;
+  }
+}
